@@ -8,8 +8,6 @@ function fetchCountryData(){
 
 The above fetch function was a core part of our app. It makes use of the fetch() and .json() methods to fetch data from the REST Countries API endpoint and process the response. Both fetch() and .json() return promises which execute asynchronously.
 
-The function we wrote to fetch country data from our RESTCountries 
-
 ## 2. Use callbacks to access values that aren’t available synchronously
 
 ## 3. Use promises to access values that aren’t available synchronously

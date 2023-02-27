@@ -6,11 +6,15 @@ function fetchCountryData(){
     .then(res => res.json())
 ```
 
-The above fetch function was a core part of our app. It makes use of the fetch() and .json() methods to fetch data from the REST Countries API endpoint and process the response. Both fetch() and .json() return promises which execute asynchronously.
+The above fetch function was a core part of our app. It makes use of the fetch() and .then() methods to fetch data from the REST Countries API endpoint and process the response. Both fetch() and .then() return promises which execute asynchronously.
 
 ## 2. Use callbacks to access values that aren’t available synchronously
 
+The same example (above) contains callbacks which grant access to information which is not available synchronously. The then() method executes asynchronously, and the callback function passed to it is executed only after the network request has been completed and the response has been received.
+
 ## 3. Use promises to access values that aren’t available synchronously
+
+
 
 ## 4. Use the fetch method to make HTTP requests and receive responses
 

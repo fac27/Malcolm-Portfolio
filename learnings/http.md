@@ -49,7 +49,28 @@ function fetchUnsplash(country) {
 
 ## 6. Use the map array method to create a new array containing new values
 
+We did not need to make use of the `.map()` array method for our project, however, we could have done so within the following function which takes an array containing numbers which represent countries (a variable in our project called `countriesArray`), and then appends these to DOM elements:
+
+```js
+function appendFlags(array) {
+  array.map((country, index) => {
+    flagImages[index].src = country.flags.png;
+    flagImages[index].id = country.name.common;
+    flagName[index].innerHTML = country.name.common;
+  });
+}
+```
+
 ## 7. Use the filter array method to create a new array with certain values removed
+
+Similarly, our project did not require the use of the `.filter()` method, but it could have been implemented in the above `appendFlags()` function, potentially by filtering through `countriesArray` to append flags of countries with populations of over 100 million:
+
+```js
+function filterCountriesByPopulation(array) {
+  const filteredArray = array.filter(country => country.population > 100000000);
+  return filteredArray;
+}
+```
 
 ## 8. Access DOM nodes using a variety of selectors
 

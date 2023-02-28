@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/117777716/221961530-f9314f8c-b230-4e38-a1e3-71b319255fd1.JPG"></img>
+</p>
+
 ## 1. Write code that executes asynchronously
 
 ```js
@@ -63,7 +67,7 @@ function appendFlags(array) {
 
 ## 7. Use the filter array method to create a new array with certain values removed
 
-Similarly, our project did not require the use of the `.filter()` method, but it could have been implemented in the above `appendFlags()` function, potentially by filtering through `countriesArray` to append flags of countries with populations of over 100 million:
+Similarly, our project did not require the use of the `.filter()` method, but it could have been implemented in the above `appendFlags()` function, potentially by filtering through `countriesArray` to create an array of countries with populations of over 100 million:
 
 ```js
 function filterCountriesByPopulation(array) {
@@ -73,6 +77,27 @@ function filterCountriesByPopulation(array) {
 ```
 
 ## 8. Access DOM nodes using a variety of selectors
+
+```js
+const imageContainer = document.querySelector("#imageContainer");
+const flagImages = document.getElementsByClassName("flagImages");
+const flagName = document.getElementsByClassName("flagName");
+const facts = document.getElementsByClassName("facts");
+const locationImg = document.getElementsByClassName("LocationImg");
+const startGameBtn = document.querySelector("#startGameBtn");
+const startGameScreen = document.querySelector("#startGameScreen");
+const loadingElement = document.querySelector("#loadingScreen div:nth-child(1)");
+const loadingScreen = document.querySelector("#loadingScreen");
+const gameScreen = document.querySelector("#game-Screen");
+const countdownEl = document.getElementById('countdown');
+const playAgain = document.querySelector("#playAgain");
+const EndGame = document.querySelector("#gameStat");
+let totalScore = document.querySelector("#TotalScore");
+let bestScore = document.querySelector("#highScore");
+let headerHighScore = document.querySelector("#bestScore");
+```
+
+As much of our project was focused on generating information and functionality to support a fuly-fledged game, we made extensive use of DOM methods to target different areas of our game screen.
 
 ## 9. Add and remove DOM nodes to change the content on the page
 

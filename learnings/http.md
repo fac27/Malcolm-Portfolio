@@ -2,6 +2,8 @@
     <img src="https://user-images.githubusercontent.com/117777716/221961530-f9314f8c-b230-4e38-a1e3-71b319255fd1.JPG"></img>
 </p>
 
+Our HTTP project was Atlas Adventure, a country guessing game which challenged users to guess as many countries as they could in 60 seconds using 2 pictures, continent names and currency symbols. It queried 2 APIs: the REST Countries and Unsplash APIs, presenting a combination of two data sources part of the project goals.
+
 ## 1. Write code that executes asynchronously
 
 ```js
@@ -97,16 +99,64 @@ let bestScore = document.querySelector("#highScore");
 let headerHighScore = document.querySelector("#bestScore");
 ```
 
-As much of our project was focused on generating information and functionality to support a fuly-fledged game, we made extensive use of DOM methods to target different areas of our game screen.
+As much of our project was focused on generating information, visual updates and UI feedback to support a fuly-fledged game, we made extensive use of DOM methods to target different areas of our game screen.
 
 ## 9. Add and remove DOM nodes to change the content on the page
 
+We did not use any methods to specifically add or remove DOM nodes in our JS, however a few examples of methods we could use would be:
+
+- `document.createElement()` to create a new element
+- `document.appendChild()` to add content to an existing element on the page
+
 ## 10. Toggle the classes applied to DOM nodes to change their CSS properties
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/117777716/221965790-64fbc85e-d744-4ab8-8945-cd573456f3b6.JPG"></img>
+</p>
+
+A prime example of this would be our `gameEnd()` function, which shows a summary of players' progress at the end of a round. We used this a callback function elsewhere in our code to display and hide multiple elements of the game screen:
+
+```js
+function gameEnd(){
+    clearInterval(countdown);
+    gameScreen.classList.add("displayNone");
+    countdownEl.classList.add("displayNone")
+    EndGame.classList.remove("displayNone");
+    totalScore.innerHTML = score;
+    bestScore.innerHTML = highScore;
+    
+}
+```
 
 ## 11. Use consistent layout and spacing
 
-## 12. Follow a spacing guideline to give our app a consistent feel
+We focused content in the centre of the players' screens, and to help do this we designed and made repeated use of a `.flexCenter{}` CSS class selector which was applied to multiple elements of our game screen HTML code:
 
-## 13. Debug client side JS in our web browser
+```css
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+```
 
-## 14. Use console.log() to help us debug our code
+Throughout the project, we made use of small, succinct CSS layout primitives like the above which we then applied to individual elements.
+
+## 12. Debug client side JS in our web browser
+
+We needed to make sure certain functions were pulling the correct information from the REST Countries API. In the below function, we log currency identifiers (3 letter codes) in our `console.log(firstKey)` call, showing specific information for the correct country the player needed to select to pass to the next challenge:
+
+```js
+function appendFacts(array){
+  const keys = Object.keys(array.currencies);
+  const firstKey = keys[0];
+  console.log(firstKey)
+}
+```
+
+This example shows the 'EUR' code in the web browser console for Latvia, which was generated as a result of the above `console.log`:
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/117777716/221969026-370b7df3-a605-4ee0-8001-0ca8baaf577e.JPG"></img>
+</p>
+

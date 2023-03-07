@@ -37,21 +37,7 @@ We had a second `fetch()` method which requested specific country imagery from t
 
 ## 5. Configure the options argument of the fetch method to make GET and POST requests
 
-Our project did not make use of any specific GET or POST methods, however our code above could be edited to use a GET method:
-
-```js
-function fetchUnsplash(country) {
-  const url = `https://api.unsplash.com/search/photos?&query=${country.name.common} Landmarks&client_id=${apiKey}&count=${count}`;
-  const options = {
-    method: 'GET'
-  };
-
-  fetch(url, options)
-    .then((res) => res.json())
-    .then((data) => rand3(data))
-    .catch((error) => backupFetch());
-}
-```
+Our project did not make use of any specific POST methods, however our fetch methods make use of the GET request each time they are used. 
 
 ## 6. Use the map array method to create a new array containing new values
 

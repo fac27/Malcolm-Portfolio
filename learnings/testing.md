@@ -27,9 +27,11 @@ test("Submitting a new task adds it to the list", () => {
 });
 ```
 
-Within this test, we pass an empty array and "item" string arguments to the `addTask()` function. The `addTask()` function creates an array of task objects. Using the `.find` method, it searches the array for the first task object which contains the "item" string as a name property. If no such task exists, the `addTask()` function will create a task object and `.push` it with the specified name property into the empty array.
+Within this test, we pass an empty array and "item" string (the name of the task the user has input) as arguments to the `addTask()` function. 
 
-The test is expected to return an array with 1 object after the array is searched with `.find`. 
+The `addTask()` function creates an array of task objects. Using the `.find` method, it searches for the first task object which contains the "item" string as a name property. If no such task exists, the `addTask()` function will create a task object and `.push` it with the specified name property into the empty array.
+
+The test is expected to return an array with a length of 1 after the array is searched with `.find`. It will succeed, since it is only possible to add one task at a time, and the first task submitted will populate the array with one object.
 
 ## 2. Write tests to mimic the behaviour of a user performing different actions
 

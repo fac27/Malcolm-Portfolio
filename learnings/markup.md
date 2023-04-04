@@ -1,5 +1,7 @@
 ## 1. Structure a site using semantic HTML to aid accessibility
 
+[Link to the deployed site](https://github.com/fac27/Atlas-Adventure)
+
 ![Image of the homepage on our agency website, featuring a large image of turquoise 3d abstract ribbon shapes set against a violet background.](/imagery/Homepage.PNG)
 
 ```html

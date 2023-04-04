@@ -2,7 +2,7 @@
     <img src="https://user-images.githubusercontent.com/117777716/221961530-f9314f8c-b230-4e38-a1e3-71b319255fd1.JPG"></img>
 </p>
 
-Our HTTP project was Atlas Adventure, a country guessing game which challenged users to guess as many countries as they could in 60 seconds using 2 pictures, continent names and currency symbols. It queried 2 APIs: the REST Countries and Unsplash APIs, presenting a combination of two data sources part of the project goals.
+Our HTTP project was [Atlas Adventure](https://fac27.github.io/Atlas-Adventure/), a country guessing game which challenged users to guess as many countries as they could in 60 seconds using 2 pictures, continent names and currency symbols. It queried 2 APIs: the REST Countries and Unsplash APIs, presenting a combination of two data sources part of the project goals.
 
 ## 1. Write code that executes asynchronously
 

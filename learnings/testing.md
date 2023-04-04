@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/117777716/228564687-aa82a6df-68b7-479b-b809-37cbe778b088.png)
 
-Our final project was focused on testing, and for this project we created JustDoIt, a to do list app.
+Our final project was focused on testing, and for this project we created [JustDoIt](https://fac27.github.io/JustDoIt/), a to do list app.
 
 ## 1. Check that passing a given input into our tests returns the expected output
 

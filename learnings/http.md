@@ -20,7 +20,7 @@ The same example (above) contains callbacks which grant access to information wh
 
 ## 3. Use promises to access values that aren’t available synchronously
 
-In addition, the same example uses promises through the `res.json()` function, which is executed asynchronously, so it does not immediately return a value but returns a Promise that resolves to the value.
+In addition, the same example uses promises through the `res.json()` function, which is executed asynchronously, so it does not immediately return a value but returns a Promise that resolves to that value.
 
 ## 4. Use the fetch method to make HTTP requests and receive responses
 
@@ -140,7 +140,7 @@ function appendFacts(array){
 }
 ```
 
-This example shows the 'EUR' code in the web browser console for Latvia, which was generated as a result of the above `console.log`:
+This example shows the 'EUR' code in the web browser console for Latvia, which was generated as a result of the above `console.log` logging the value of firstKey, which contained this currency information:
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/117777716/221969026-370b7df3-a605-4ee0-8001-0ca8baaf577e.JPG"></img>
